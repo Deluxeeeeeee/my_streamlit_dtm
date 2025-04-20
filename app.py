@@ -28,6 +28,7 @@ petal_width = st.slider("Petal Width (cm)",0.1,2.5,0.2)
 #Pedict button 
 if st.button("Predict"):
     input_data = np.array([[sepal_length, sepal_width, petal_length, petal_width]])
-    prediction = dtm_model.Predict(input_data)
+    prediction = dtm_model.predict(input_data)
     species = ['Sentosa', 'Versicolor', 'Virginica']
     st.success = (f"The predict species is : **{species[prediction[0]]}**")
+    
