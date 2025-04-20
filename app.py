@@ -20,15 +20,15 @@ st.title("Iris flower Classification")
 st.write("Enter the feature of the iris flower:")
 
 #Input fields 
-sepal_length = st.slider("Sepal Length (cm)",4.0,8.0,5.1)
-sepal_width = st.slider("Sepal Width (cm)",2.0,4.5,3.5)
-petal_length = st.slider("Petal Length (cm)",1.0,7.0,1.4)
-petal_width = st.slider("Petal Width (cm)",0.1,2.5,0.2)
+sepal_length = st.slider("Sepal Length (cm)",4.0, 8.0, 5.1)
+sepal_width = st.slider("Sepal Width (cm)",2.0, 4.5, 3.5)
+petal_length = st.slider("Petal Length (cm)",1.0, 7.0, 1.4)
+petal_width = st.slider("Petal Width (cm)",0.1, 2.5, 0.2)
 
 #Pedict button 
 if st.button("Predict"):
     input_data = np.array([[sepal_length, sepal_width, petal_length, petal_width]])
     prediction = dtm_model.predict(input_data)
-    species = ['Sentosa', 'Versicolor', 'Virginica']
-    st.success = (f"The predict species is : **{species[prediction[0]]}**")
+    species = ['Setosa', 'Versicolor', 'Virginica']
+    st.success(f"The Predict is: **{species[prediction[0]]}**")
     
